@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";; rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>;
+</head>
+<body>
+    <div class="container">
+        <details ontoggle="message()">
+            <summary>Instructions</summary>
+            <i>enter 2 numbers then find its sum</i>
+        </details>
+        <br>
+        <form>
+            <label>Enter 1st number:</label> <input type="number" id="num1" class="form-control" placeholder="input here...">
+            <br>
+            <label>Enter 2nd number:</label> <input type="number" id="num2" class="form-control" placeholder="input here...">
+            <br>
+            <button type="Submit" class="btn btn-success" onmouseover="plus()">Calculate addition</button>
+            <button type="Submit" class="btn btn-success" onmouseover="minus()">Calculate subtraction</button>
+            <a href="index.html"><button class="btn btn-primary">Refresh</button></a>
+            <br><BR>
+            <span class="form-control"><h1 id="result">Result</h1></span>   
+        </form>
+        <script>
+            function plus(){
+                var num1 = document.getElementById("num1").value;
+                var num2 = document.getElementById("num2").value;
+                var sum = Number(num1) + Number(num2);
+                document.getElementById('result').innerHTML= 'Answer is' + ' ' + sum; 
+            }
+            function minus(){
+                var num1 = document.getElementById("num1").value;
+                var num2 = document.getElementById("num2").value;
+                var sum = Number(num1) - Number(num2);
+                document.getElementById('result').innerHTML= 'Answer is' + ' ' + sum; 
+            }
+            function message(){
+                alert("try it");
+            }
+        </script>
+    </div>
+</body>
+</html>
